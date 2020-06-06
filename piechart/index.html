@@ -4,21 +4,69 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
     <!-- Bootstrap CSS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <title>Pie Chart</title>
+    <script src="https://kit.fontawesome.com/a3f998c3fd.js" crossorigin="anonymous"></script>
+    <title>Hello, world!</title>
   </head>
   <body>
-   <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#"><img src="img.png" height="35px" width="35px" alt=""> Dashboard</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Languages
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Python</a>
+          <a class="dropdown-item" href="#">C++</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else</a>
+        </div>
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Machines
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Machine A</a>
+          <a class="dropdown-item" href="#">Machine B</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Contact Us
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="mailto:someone@example.com">Send email</a>
+          <a class="dropdown-item" href="tel:9876543210">Helpline Number</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">FAQ's</a>
+        </div>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+     
+      <button class="btn btn-success my-2 my-sm-0" type="submit">Sign IN<i class="fa fa-sign-in"></i></button>
+    </form>
+  </div>
+</nav>
+     <div class="container">
     <canvas id="PieChart" width="400" height="400"></canvas>
   </div>
-
-   <script>
+    <script>
    
        jQuery(document).ready(function() {
 
@@ -26,57 +74,63 @@ var chartDiv = $("#PieChart");
 
 var myChart = new Chart(chartDiv, {
 
-    type: 'pie',
+    type: 'pie',
 
-    data: {
+    data: {
 
-        labels: ["C", "Python", "Javacript", "C++", "Java"],
+        labels: ["C", "Python", "Javacript", "C++", "Java"],
 
-        datasets: [
+        datasets: [
 
-        {
+        {
 
-            data: [21,39, 10, 14,16],
+            data: [21,39, 10, 14,16],
 
-            backgroundColor: [
+            backgroundColor: [
 
-               "#FF6384",
+               "#FF6384",
 
-            "#4BC0C0",
+            "#4BC0C0",
 
-            "#FFCE56",
+            "#FFCE56",
 
-            "#E7E9ED",
+            "#E7E9ED",
 
-            "#36A2EB"
+            "#36A2EB"
 
-            ]
+            ]
 
-        }]
+        }]
 
-    },
+    },
 
-    options: {
+    options: {
 
-        title: {
+        title: {
 
-            display: true,
+            display: true,
 
-            text: 'Pie Chart'
+            text: 'Pie Chart'
 
-        },
+        },
 
         responsive: true,
 
 maintainAspectRatio: false,
 
-    }
+    }
 
 });
 
-    });
+    });
 
 
    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
